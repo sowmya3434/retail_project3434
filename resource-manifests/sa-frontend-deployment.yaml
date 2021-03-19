@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment                                          # 1
+kind: Development                                          # 1
 metadata:
   name: sa-frontend
   labels:
@@ -21,7 +21,7 @@ spec:
         app: sa-frontend                                  # 6
     spec:
       containers:
-        - image: rinormaloku/sentiment-analysis-frontend
+        - image: rinormaloku/sentiment-analysis-frontend:latest
           imagePullPolicy: Always                         # 7
           name: sa-frontend
           ports:
